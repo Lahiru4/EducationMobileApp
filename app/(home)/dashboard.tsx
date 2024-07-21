@@ -38,9 +38,8 @@ class Dashboard extends Component {
                 </View>
                 <Text style={[{textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: '#333333'}]}>Course</Text>
 
-
-                <View style={[{flexDirection: 'row'}]}>
-                    <View style={[{width: '20%', flex: 1, marginRight: 20}]}>
+                <View style={[{flexDirection: 'row',marginRight:70}]}>
+                    <View style={[{width: '5%', flex: 1 }]}>
                         <Image
                             source={require("@/assets/tempImage/java.png")}
                             style={styles.logo}
@@ -48,7 +47,7 @@ class Dashboard extends Component {
                         <Text style={[{color: '#FFFFFF', marginTop: -30, marginLeft: 30, fontWeight: 'bold'}]}>
                             Java prf</Text>
                     </View>
-                    <View style={[{width: '20%', flex: 1, marginRight: 20}]}>
+                    <View style={[{width: '5%', flex: 1}]}>
                         <Image
                             source={require("@/assets/tempImage/java.png")}
                             style={styles.logo}
@@ -58,8 +57,8 @@ class Dashboard extends Component {
                     </View>
                 </View>
 
-                <View style={[{flexDirection: 'row'}]}>
-                    <View style={[{width: '20%', flex: 1, marginRight: 20}]}>
+                <View style={[{flexDirection: 'row',marginRight:70}]}>
+                    <View style={[{width: '5%', flex: 1}]}>
                         <Image
                             source={require("@/assets/tempImage/java.png")}
                             style={styles.logo}
@@ -67,7 +66,7 @@ class Dashboard extends Component {
                         <Text style={[{color: '#FFFFFF', marginTop: -30, marginLeft: 30, fontWeight: 'bold'}]}>
                             Java Methode</Text>
                     </View>
-                    <View style={[{width: '20%', flex: 1, marginRight: 20}]}>
+                    <View style={[{width: '5%', flex: 1}]}>
                         <Image
                             source={require("@/assets/tempImage/java.png")}
                             style={styles.logo}
