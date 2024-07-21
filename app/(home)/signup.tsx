@@ -6,7 +6,10 @@ import {useRouter} from 'expo-router';
 export default function signup() {
     const router = useRouter();
     return (
-        <View style={[{alignSelf: 'center'}]}>
+        <View style={[{
+            flex: 1,
+            alignItems: 'center'
+        }]}>
             <Image
                 source={require("@/assets/image/logo.png")}
                 style={styles.container}
@@ -58,7 +61,7 @@ export default function signup() {
             </View>
             <TouchableOpacity style={[{
                 backgroundColor: "#2ECC71",
-                width: 330,
+                width: '90%',
                 height: 50,
                 borderRadius: 15,
                 alignItems: 'center',
@@ -70,10 +73,10 @@ export default function signup() {
                 </Text>
             </TouchableOpacity>
 
-            <Text style={[{marginTop: 20, color: '#0F0C80'}]}>
+            <Text style={[{marginTop: 50, color: '#0F0C80', justifyContent: 'center', alignItems: 'center'}]}>
                 Already have an account ?
                 <Text style={[{color: '#0F0C80', fontWeight: 'bold'}]}
-                      onPress={() => router.push('/sigin')}>
+                      onPress={() => router.push('/home')}>
                     Sing In
                 </Text>
             </Text>
@@ -86,13 +89,13 @@ const styles = StyleSheet.create({
         fontSize: 35,
         color: "#0F0C80",
         alignSelf: 'flex-start',
-        marginLeft: 5,
+        marginLeft: 20,
         fontWeight: 'bold',
         marginTop:30
     },
     container: {
         alignSelf: 'center',
-        marginTop: 100
+        marginTop: 100,
     },
     input: {
         width: '80%',

@@ -2,7 +2,6 @@ import React from "react";
 import {Text, View, Image, StyleSheet, TextInput, TouchableOpacity} from "react-native";
 import {useRouter} from 'expo-router';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
-import {homedir} from "node:os";
 
 export default function Login() {
     const router = useRouter();
@@ -12,7 +11,9 @@ export default function Login() {
                 source={require("@/assets/image/logo.png")}
                 style={styles.logo}
             />
+
             <Text style={styles.signin}>Sign in</Text>
+            {/*input email or user name*/}
             <View style={styles.inputContaioner}>
                 <MaterialCommunityIcons
                     name="account-circle-outline"
@@ -24,6 +25,7 @@ export default function Login() {
                 />
             </View>
 
+            {/*input password*/}
             <View style={styles.inputContaioner}>
                 <MaterialCommunityIcons
                     name="account-lock"
@@ -31,9 +33,7 @@ export default function Login() {
                     style={{marginLeft: 10}}
                     color='#0F0C80'
                 />
-
                 <TextInput placeholder="Password" placeholderTextColor="#0F0C80" style={styles.input}
-
                 />
                 <MaterialCommunityIcons
                     name="eye-outline"
@@ -42,6 +42,7 @@ export default function Login() {
                     color='#777777'
                 />
             </View>
+
             <Text style={[{
                 fontSize: 14,
                 color: "#0F0C80",
@@ -51,6 +52,7 @@ export default function Login() {
                 marginTop: 20
             }]}>Forget Password ?</Text>
 
+            {/*sign button start*/}
             <TouchableOpacity style={[{
                 backgroundColor: "#2ECC71",
                 width: '90%',
@@ -59,11 +61,14 @@ export default function Login() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginTop: 20
-            }]}>
+            }]}
+                              onPress={() => router.push('/dashboard')}
+            >
                 <Text style={[{color: "#FFFFFF", textAlign: 'center', fontSize: 15}]}>
                     Sign in
                 </Text>
             </TouchableOpacity>
+            {/*sign button end*/}
 
             <Text style={[{marginTop: 25}]}>Or sign in With</Text>
 
@@ -149,13 +154,15 @@ export default function Login() {
                     />
                 </TouchableOpacity>
             </TouchableOpacity>
-            <Text style={[{marginTop: 20, color: '#0F0C80'}]}>
+
+            <Text style={[{marginTop: 20, color: '#0F0C80', justifyContent: 'center', alignItems: 'center'}]}>
                 Don’t have account ?
                 <Text style={[{color: '#0F0C80', fontWeight: 'bold'}]}
                       onPress={() => router.push('/signup')}>
                     Sing Up
                 </Text>
             </Text>
+
         </View>
     );
 }

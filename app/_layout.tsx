@@ -1,3 +1,4 @@
+import React from "react";
 import {Stack} from "expo-router";
 
 export default function RootLayout() {
@@ -10,7 +11,6 @@ export default function RootLayout() {
                                   title: "back"
                               }
                           }/>
-
             <Stack.Screen name="(home)"
                           options={
                               {
